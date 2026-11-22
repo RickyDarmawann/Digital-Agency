@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - Coder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="authView" class="auth hidden">
+  <form id="authForm" class="card form auth-card">
+    <h2 id="authTitle">Login Admin</h2>
+    <div id="authAlert" class="alert error hidden"></div>
+    <label>Username</label><input name="username" required>
+    <label>Password</label><input type="password" name="password" required>
+    <button class="btn" type="submit" id="authBtn">Masuk</button>
+    <p class="small"><a href="/">← Kembali ke website</a></p>
+  </form>
+</div>
+
+<div id="dashView" class="hidden">
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <span class="logo">Coder<span>.</span> <small>Admin</small></span>
+      <div class="nav-tools">
+        <a href="/" class="btn btn-sm btn-ghost">Lihat Website</a>
+        <button class="icon-btn" id="themeBtn" type="button">🌓</button>
+        <button class="btn btn-sm" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </div>
+  </header>
+  <div class="container admin-layout">
+    <aside id="sidebar"></aside>
+    <section id="content"></section>
+  </div>
+</div>
+
+<dialog id="dlg"><form id="dlgForm" class="form"></form></dialog>
+
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

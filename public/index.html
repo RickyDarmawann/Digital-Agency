@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coder - Digital Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a href="#home" class="logo">Coder<span>.</span></a>
+    <nav id="nav">
+      <a href="#layanan">Layanan</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#tim">Tim</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak" class="btn btn-sm">Hubungi Kami</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Ganti tema">🌓</button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="chip">Digital Agency Terpercaya</span>
+        <h1>Solusi Digital untuk Bisnis Anda</h1>
+        <p class="lead">Website, aplikasi, desain, dan pemasaran online. Semua dalam satu tim yang siap membantu bisnis Anda tumbuh.</p>
+        <div class="btn-row">
+          <a href="#layanan" class="btn btn-light">Lihat Layanan</a>
+          <a href="#kontak" class="btn btn-outline-light">Konsultasi Gratis</a>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div><strong id="stAhli">0</strong><span>Ahli</span></div>
+        <div><strong id="stKlien">0</strong><span>Klien</span></div>
+        <div><strong id="stProyek">0</strong><span>Proyek</span></div>
+        <div><strong id="stRating">0</strong><span>Rating ★</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section id="layanan" class="section">
+    <div class="container">
+      <h2>Layanan Kami</h2>
+      <p class="sub">Pilih layanan sesuai kebutuhan bisnis Anda.</p>
+      <div class="pills" id="svcPills"></div>
+      <div class="grid" id="svcGrid"><p class="muted">Memuat layanan...</p></div>
+    </div>
+  </section>
+
+  <!-- PORTOFOLIO -->
+  <section id="portofolio" class="section alt">
+    <div class="container">
+      <h2>Portofolio</h2>
+      <p class="sub">Proyek yang sudah kami kerjakan bersama klien.</p>
+      <div class="pills" id="prjPills"></div>
+      <div class="grid" id="prjGrid"><p class="muted">Memuat proyek...</p></div>
+    </div>
+  </section>
+
+  <!-- TIM -->
+  <section id="tim" class="section">
+    <div class="container">
+      <h2>Tim Kami</h2>
+      <p class="sub">Orang-orang di balik setiap proyek.</p>
+      <div class="grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section id="testimoni" class="section alt">
+    <div class="container">
+      <h2>Kata Klien</h2>
+      <p class="sub">Pengalaman mereka bekerja sama dengan kami.</p>
+      <div class="grid" id="testiGrid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container narrow">
+      <h2>Pertanyaan Umum</h2>
+      <div id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="section alt">
+    <div class="container">
+      <h2>Hubungi Kami</h2>
+      <p class="sub">Ceritakan kebutuhan Anda, kami balas secepatnya.</p>
+      <div class="two-col">
+        <form id="contactForm" class="card form">
+          <h3>Kirim Pesan</h3>
+          <div id="formAlert" class="alert hidden"></div>
+          <div class="row2">
+            <div><label for="nama">Nama</label><input id="nama" name="nama" required maxlength="100"></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required maxlength="150"></div>
+          </div>
+          <div class="row2">
+            <div><label for="telepon">No. Telepon (opsional)</label><input id="telepon" name="telepon" maxlength="30"></div>
+            <div><label for="pilihLayanan">Layanan</label>
+              <select id="pilihLayanan" name="layanan_id"><option value="">Belum tahu / konsultasi</option></select></div>
+          </div>
+          <label for="judul">Judul</label><input id="judul" name="judul" required maxlength="150">
+          <label for="isi_pesan">Pesan</label><textarea id="isi_pesan" name="isi_pesan" rows="4" required></textarea>
+          <button class="btn" type="submit">Kirim Pesan</button>
+        </form>
+
+        <div class="card form">
+          <h3>Cek Status Pesan</h3>
+          <p class="muted">Masukkan kode yang Anda terima setelah mengirim pesan.</p>
+          <form id="trackForm">
+            <label for="tKode">Kode Pesan</label><input id="tKode" placeholder="INQ-0001" required>
+            <label for="tEmail">Email</label><input id="tEmail" type="email" required>
+            <button class="btn" type="submit">Cek Status</button>
+          </form>
+          <div id="trackResult"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><div class="logo">Coder<span>.</span></div><p>Digital agency yang membantu bisnis tampil dan bertumbuh di dunia digital.</p></div>
+    <div><strong>Menu</strong><a href="#layanan">Layanan</a><a href="#portofolio">Portofolio</a><a href="#kontak">Kontak</a></div>
+    <div><strong>Admin</strong><a href="admin.html">Login Admin</a></div>
+  </div>
+  <p class="copy">© 2026 Coder Digital Agency</p>
+</footer>
+
+<script src="common.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
